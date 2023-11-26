@@ -22,7 +22,7 @@ jobs:
           dotnet-version: '7.x'
           include-prerelease: true
       - name : Init workload
-        run : dotnet workload restore MedoxPro/Server/MedoxPro.Server.csproj
+        run : dotnet workload install wasm-tools
       - name: Build with dotnet
         run: dotnet build MedoxPro/Server/MedoxPro.Server.csproj --configuration Release 
 
