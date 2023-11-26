@@ -23,7 +23,7 @@ jobs:
           include-prerelease: true
 
       - name: Build with dotnet
-        run: dotnet build MedoxPro/Server/MedoxPro.Server.csproj--configuration Release 
+        run: dotnet build MedoxPro/Server/MedoxPro.Server.csproj --configuration Release 
 
       - name: dotnet publish
         run: dotnet publish MedoxPro/Server/MedoxPro.Server.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
