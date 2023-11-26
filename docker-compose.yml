@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  medoxpro.server:
+    image: ${DOCKER_REGISTRY-}medoxpro
+    build:
+      context: .
+      dockerfile: MedoxPro/Server/Dockerfile

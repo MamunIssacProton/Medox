@@ -1,0 +1,20 @@
+﻿@page "/counter"
+
+
+<h3>Vatija Whiteboard</h3>
+<SKCanvasView OnPaintSurface="PaintSurf" style="height: 500px; background-color:black;" IgnorePixelScaling="true">
+</SKCanvasView>
+@code {
+    void PaintSurf(SKPaintSurfaceEventArgs e)
+    {
+        var surf = e.Surface;
+        var canvas = surf.Canvas;
+        using SKPaint paint = new SkiaSharp.SKPaint();
+        paint.Color = SkColors.DodgerBlue;
+        paint.StrokeWidth = 30;
+        paint.Style = SkiaSharp.SKPaintStyle.Fill;
+        canvas.Clear(SkColors.Brown);
+        canvas.DrawRect(e.Info.Rect, paint);
+    }
+
+}
